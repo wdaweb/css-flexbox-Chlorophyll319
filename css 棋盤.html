@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      p {
+        font-size: 3vh;
+        font-family: 標楷體;
+      }
+      #w_all_w > p {
+        writing-mode: vertical-rl;
+        text-orientation: upright;
+      }
+
+      #w_all_w {
+        /* 控制子層↓ */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: rgb(232, 255, 168);
+      }
+
+      #all {
+        width: 60vh;
+        height: 65vh;
+        /* 控制子層↓ */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: aquamarine;
+      }
+
+      #inner_all {
+        padding: 5vh;
+        margin: 5vh;
+        background-color: beige;
+        position: relative;
+      }
+
+      #black {
+        display: flex;
+        flex-wrap: wrap;
+        background-color: gray;
+      }
+
+      #river {
+        width: 40vh;
+        height: 5vh;
+        background-color: turquoise;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      #red {
+        display: flex;
+        flex-wrap: wrap;
+        background-color: pink;
+      }
+
+      .block {
+        width: 5vh;
+        height: 5vh;
+        border: 0.1vh solid black;
+      }
+
+      .flag {
+        width: calc(5vh - 0.6vh);
+        height: calc(5vh - 0.6vh);
+        border-radius: 100%;
+        background-color: rgb(255, 255, 255);
+      }
+
+      .block + .flag {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .flag_corner {
+        width: 45vh;
+        display: flex;
+        flex-wrap: wrap;
+        position: absolute;
+        gap: 0.3vh 0.65vh;
+      }
+
+      #black_flag {
+        top: 3.5vh;
+        left: 2.5vh;
+        color: black;
+      }
+
+      #red_flag {
+        bottom: 3.5vh;
+        left: 2.5vh;
+        color: red;
+      }
+
+      .space {
+        border: 0;
+        background-color: rgb(206, 166, 246);
+        visibility: hidden;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="w_all_w">
+      <p>棋盤裡，車無輪，馬無韁，叫聲將軍提防提防</p>
+      <div id="all">
+        <div id="inner_all">
+          <div id="black_flag" class="flag_corner">
+            <div class="block flag">
+              <p>車</p>
+            </div>
+            <div class="block flag">
+              <p>馬</p>
+            </div>
+            <div class="block flag">
+              <p>象</p>
+            </div>
+            <div class="block flag">
+              <p>士</p>
+            </div>
+            <div class="block flag">
+              <p>將</p>
+            </div>
+            <div class="block flag">
+              <p>士</p>
+            </div>
+            <div class="block flag">
+              <p>象</p>
+            </div>
+            <div class="block flag">
+              <p>馬</p>
+            </div>
+            <div class="block flag">
+              <p>車</p>
+            </div>
+            <div class="block flag space"></div>
+            <div class="block flag space"></div>
+            <div class="block flag space"></div>
+            <div class="block flag space"></div>
+            <div class="block flag space"></div>
+            <div class="block flag space"></div>
+            <div class="block flag space"></div>
+            <div class="block flag space"></div>
+            <div class="block flag space"></div>
+            <div class="block flag space"></div>
+            <div class="block flag">
+              <p>炮</p>
+            </div>
+            <div class="block flag space"></div>
+            <div class="block flag space"></div>
+            <div class="block flag space"></div>
+            <div class="block flag space"></div>
+            <div class="block flag space"></div>
+            <div class="block flag">
+              <p>炮</p>
+            </div>
+            <div class="block flag space"></div>
+            <div class="block flag">
+              <p>卒</p>
+            </div>
+            <div class="block flag space"></div>
+            <div class="block flag">
+              <p>卒</p>
+            </div>
+            <div class="block flag space"></div>
+            <div class="block flag">
+              <p>卒</p>
+            </div>
+            <div class="block flag space"></div>
+            <div class="block flag">
+              <p>卒</p>
+            </div>
+            <div class="block flag space"></div>
+            <div class="block flag">
+              <p>卒</p>
+            </div>
+          </div>
+          <div id="black">
+            <div class="block"></div>
+            <div class="block"></div>
+            <div class="block"></div>
+            <div class="block"></div>
+            <div class="block"></div>
+            <div class="block"></div>
+            <div class="block"></div>
+            <div class="block"></div>
+            <div class="block"></div>
+            <div class="block"></div>
+            <div class="block"></div>
+            <div class="block"></div>
+            <div class="block"></div>
+            <div class="block"></div>
+            <div class="block"></div>
+            <div class="block"></div>
+            <div class="block"></div>
+            <div class="block"></div>
+            <div class="block"></div>
+            <div class="block"></div>
+            <div class="block"></div>
+            <div class="block"></div>
+            <div class="block"></div>
+            <div class="block"></div>
+            <div class="block"></div>
+            <div class="block"></div>
+            <div class="block"></div>
+            <div class="block"></div>
+            <div class="block"></div>
+            <div class="block"></div>
+            <div class="block"></div>
+            <div class="block"></div>
+          </div>
+          <div id="river">
+            <p>楚河漢界</p>
+          </div>
+          <div id="red">
+            <div id="red_flag" class="flag_corner">
+              <div class="block flag">
+                <p>卒</p>
+              </div>
+              <div class="block flag space"></div>
+              <div class="block flag">
+                <p>卒</p>
+              </div>
+              <div class="block flag space"></div>
+              <div class="block flag">
+                <p>卒</p>
+              </div>
+              <div class="block flag space"></div>
+              <div class="block flag">
+                <p>卒</p>
+              </div>
+              <div class="block flag space"></div>
+              <div class="block flag">
+                <p>卒</p>
+              </div>
+              <div class="block flag space"></div>
+              <div class="block flag">
+                <p>炮</p>
+              </div>
+              <div class="block flag space"></div>
+              <div class="block flag space"></div>
+              <div class="block flag space"></div>
+              <div class="block flag space"></div>
+              <div class="block flag space"></div>
+              <div class="block flag">
+                <p>炮</p>
+              </div>
+              <div class="block flag space"></div>
+              <div class="block flag space"></div>
+              <div class="block flag space"></div>
+              <div class="block flag space"></div>
+              <div class="block flag space"></div>
+              <div class="block flag space"></div>
+              <div class="block flag space"></div>
+              <div class="block flag space"></div>
+              <div class="block flag space"></div>
+              <div class="block flag space"></div>
+              <div class="block flag">
+                <p>車</p>
+              </div>
+              <div class="block flag">
+                <p>馬</p>
+              </div>
+              <div class="block flag">
+                <p>象</p>
+              </div>
+              <div class="block flag">
+                <p>士</p>
+              </div>
+              <div class="block flag">
+                <p>將</p>
+              </div>
+              <div class="block flag">
+                <p>士</p>
+              </div>
+              <div class="block flag">
+                <p>象</p>
+              </div>
+              <div class="block flag">
+                <p>馬</p>
+              </div>
+              <div class="block flag">
+                <p>車</p>
+              </div>
+            </div>
+            <div class="block"></div>
+            <div class="block"></div>
+            <div class="block"></div>
+            <div class="block"></div>
+            <div class="block"></div>
+            <div class="block"></div>
+            <div class="block"></div>
+            <div class="block"></div>
+            <div class="block"></div>
+            <div class="block"></div>
+            <div class="block"></div>
+            <div class="block"></div>
+            <div class="block"></div>
+            <div class="block"></div>
+            <div class="block"></div>
+            <div class="block"></div>
+            <div class="block"></div>
+            <div class="block"></div>
+            <div class="block"></div>
+            <div class="block"></div>
+            <div class="block"></div>
+            <div class="block"></div>
+            <div class="block"></div>
+            <div class="block"></div>
+            <div class="block"></div>
+            <div class="block"></div>
+            <div class="block"></div>
+            <div class="block"></div>
+            <div class="block"></div>
+            <div class="block"></div>
+            <div class="block"></div>
+            <div class="block"></div>
+          </div>
+        </div>
+      </div>
+      <p>圖畫裡，龍不吟，虎不嘯，小小書童可笑可笑</p>
+    </div>
+  </body>
+</html>
